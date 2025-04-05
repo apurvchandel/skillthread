@@ -80,7 +80,6 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
-
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
@@ -88,17 +87,17 @@
             <p>Global IT Consulting | Quality Engineering | AI & Cloud | Cybersecurity</p>
             <div class="d-flex">
               <a href="#contact" class="btn-get-started">Let's Connect</a>
-              <a href="https://www.youtube.com/" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+              <a href="https://www.youtube.com/" class="glightbox btn-watch-video d-flex align-items-center">
+                <i class="bi bi-play-circle"></i><span>Watch Video</span>
+              </a>
             </div>
           </div>
-
         </div>
       </div>
-
     </section><!-- /Hero Section -->
 
     <!-- Featured Services Section -->
-    <section id="featured-services" class="featured-services section">
+    <!-- <section id="featured-services" class="featured-services section">
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
@@ -124,7 +123,8 @@
           </div>
         </div>
       </div>
-    </section><!-- /Featured Services Section -->
+    </section> -->
+    <!-- /Featured Services Section -->
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -659,6 +659,25 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Include the Vanta.js and Three.js scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.fog.min.js"></script>
+
+  <script>
+    // Initialize Vanta.js for the #hero section
+    document.addEventListener("DOMContentLoaded", function () {
+      VANTA.FOG({
+        el: "#hero",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        highlightColor: 0xc100ff
+      });
+    });
+  </script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
